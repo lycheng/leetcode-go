@@ -6,7 +6,7 @@ import (
 	"github.com/lycheng/leetcode-go/utils"
 )
 
-func Test_Traversal(t *testing.T) {
+func TestTraversal(t *testing.T) {
 
 	left := utils.TreeNode{2, nil, nil}
 	right := utils.TreeNode{3, nil, nil}
