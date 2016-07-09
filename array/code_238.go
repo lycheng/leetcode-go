@@ -1,6 +1,7 @@
 package array
 
 // TLE ????????
+// 为什么同样的算法 Py 能过
 func productExceptSelf(nums []int) []int {
 
 	lenNums := len(nums)
