@@ -51,3 +51,16 @@ func TestCode342(t *testing.T) {
 	}
 	t.Log("Success")
 }
+
+func TestCode263(t *testing.T) {
+	if isUgly(0) {
+		t.Error("error")
+	}
+	if !isUgly(1) {
+		t.Error("error")
+	}
+	if isUgly(14) {
+		t.Error("error")
+	}
+	t.Log("Success")
+}
