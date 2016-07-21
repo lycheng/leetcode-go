@@ -43,3 +43,37 @@ func TestCode202(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode36(t *testing.T) {
+	board := [][]byte{
+		[]byte("53..7...."),
+		[]byte("6..195..."),
+		[]byte(".98....6."),
+		[]byte("8...6...3"),
+		[]byte("4..8.3..1"),
+		[]byte("7...2...6"),
+		[]byte(".6....28."),
+		[]byte("...419..5"),
+		[]byte("....8..79"),
+	}
+
+	if !isValidSudoku(board) {
+		t.Error("error")
+	}
+
+	board1 := [][]byte{
+		[]byte("53..7...."),
+		[]byte("6..195..."),
+		[]byte(".98....6."),
+		[]byte("8...6...3"),
+		[]byte("4..8.1..1"),
+		[]byte("7...2...6"),
+		[]byte(".6....28."),
+		[]byte("...419..5"),
+		[]byte("....8..79"),
+	}
+	if isValidSudoku(board1) {
+		t.Error("error")
+	}
+	t.Log("success")
+}
