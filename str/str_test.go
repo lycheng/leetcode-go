@@ -30,3 +30,29 @@ func TestCode345(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode20(t *testing.T) {
+	validStrings := []string{
+		"()",
+		"()[]{}",
+	}
+
+	for _, s := range validStrings {
+		if !isValid(s) {
+			t.Error("error")
+		}
+	}
+
+	notValidStrings := []string{
+		"}",
+		"{",
+		"(]",
+		"([)]",
+	}
+	for _, s := range notValidStrings {
+		if isValid(s) {
+			t.Error("error")
+		}
+	}
+	t.Log("success")
+}

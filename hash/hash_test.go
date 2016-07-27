@@ -77,3 +77,28 @@ func TestCode36(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode205(t *testing.T) {
+	trueTuple := [][]string{
+		[]string{"egg", "add"},
+		[]string{"paper", "title"},
+	}
+
+	for _, items := range trueTuple {
+		if !isIsomorphic(items[0], items[1]) {
+			t.Error("error")
+		}
+	}
+
+	falseTuple := [][]string{
+		[]string{"foo", "bar"},
+		[]string{"ab", "aa"},
+	}
+
+	for _, items := range falseTuple {
+		if isIsomorphic(items[0], items[1]) {
+			t.Error("error")
+		}
+	}
+	t.Log("success")
+}
