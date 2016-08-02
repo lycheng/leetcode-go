@@ -102,3 +102,13 @@ func TestCode205(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode347(t *testing.T) {
+	src := []int{1, 1, 1, 2, 2, 3}
+	target := []int{1, 2}
+
+	if !reflect.DeepEqual(target, topKFrequent(src, len(target))) {
+		t.Error("error")
+	}
+	t.Log("success")
+}

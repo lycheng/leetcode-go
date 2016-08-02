@@ -56,3 +56,39 @@ func TestCode20(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode28(t *testing.T) {
+	src := "hello"
+	target := "ello"
+	result := 1
+
+	if strStr(src, target) != result {
+		t.Error("error")
+	}
+
+	src = "hello,world"
+	target = "abc"
+	result = -1
+
+	if strStr(src, target) != result {
+		t.Error("error")
+	}
+	t.Log("success")
+
+	src = "hello,world"
+	target = ""
+	result = 0
+
+	if strStr(src, target) != result {
+		t.Error("error")
+	}
+
+	src = "hello"
+	target = "hello"
+	result = 0
+
+	if strStr(src, target) != result {
+		t.Error("error")
+	}
+	t.Log("success")
+}
