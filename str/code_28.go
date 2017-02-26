@@ -1,3 +1,4 @@
+// package str
 package str
 
 func strStr(haystack string, needle string) int {
