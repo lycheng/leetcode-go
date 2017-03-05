@@ -22,6 +22,13 @@ func TestCode461(t *testing.T) {
 	t.Log("Success")
 }
 
+func TestCode476(t *testing.T) {
+	if findComplement(5) != 2 {
+		t.Error("Error")
+	}
+	t.Log("Success")
+}
+
 func TestCode477(t *testing.T) {
 
 	nums := []int{4, 14, 2}
