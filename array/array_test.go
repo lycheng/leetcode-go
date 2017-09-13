@@ -1,3 +1,4 @@
+// package array test codes
 package array
 
 import (

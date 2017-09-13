@@ -92,3 +92,23 @@ func TestCode28(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode520(t *testing.T) {
+	src := "google"
+	if !detectCapitalUse(src) {
+		t.Error("error", src)
+	}
+	src = "Google"
+	if !detectCapitalUse(src) {
+		t.Error("error", src)
+	}
+	src = "gg"
+	if !detectCapitalUse(src) {
+		t.Error("error", src)
+	}
+	src = "googGle"
+	if detectCapitalUse(src) {
+		t.Error("error", src)
+	}
+	t.Log("success")
+}

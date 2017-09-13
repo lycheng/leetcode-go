@@ -1,3 +1,4 @@
+// package math
 package math
 
 func isUgly(num int) bool {

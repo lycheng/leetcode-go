@@ -1,3 +1,4 @@
+// package str
 package str
 
 import (

@@ -64,3 +64,14 @@ func TestCode263(t *testing.T) {
 	}
 	t.Log("Success")
 }
+
+func TestCode50(t *testing.T) {
+	if myPow(2, 2) != 4.0 {
+		t.Error("error")
+	}
+
+	if myPow(2, -2) != 0.25 {
+		t.Error("error")
+	}
+	t.Log("Success")
+}
