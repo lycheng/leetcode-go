@@ -31,3 +31,23 @@ func BenchmarkCode238(t *testing.B) {
 		productExceptSelf(src)
 	}
 }
+
+func TestCode189(t *testing.T) {
+	src := []int{1, 2, 3, 4, 5, 6, 7}
+	dst := []int{5, 6, 7, 1, 2, 3, 4}
+
+	rotate(src, 3)
+
+	if !reflect.DeepEqual(src, dst) {
+		t.Error("Error")
+	}
+
+	src = []int{2147483647, -2147483648, 33, 219, 0}
+	dst = []int{-2147483648, 33, 219, 0, 2147483647}
+	rotate(src, 4)
+	if !reflect.DeepEqual(src, dst) {
+		t.Error("Error")
+	}
+
+	t.Log("Success")
+}
