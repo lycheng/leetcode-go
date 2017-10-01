@@ -1,5 +1,6 @@
 package array
 
+// https://leetcode.com/problems/rotate-array/
 func rotate(nums []int, k int) {
 	l := len(nums)
 	k = k % l

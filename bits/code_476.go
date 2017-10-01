@@ -1,7 +1,6 @@
-// package bits
-// https://leetcode.com/problems/number-complement
 package bits
 
+// https://leetcode.com/problems/number-complement
 func findComplement(num int) int {
 	var f bool
 	for i := 31; i >= 0; i-- {

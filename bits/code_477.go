@@ -1,6 +1,6 @@
-// package bits
 package bits
 
+// https://leetcode.com/problems/total-hamming-distance/description/
 func totalHammingDistance(nums []int) int {
 	count := len(nums)
 	result := 0

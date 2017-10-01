@@ -3,6 +3,7 @@ package bits
 
 import "fmt"
 
+// https://leetcode.com/problems/hamming-distance/
 func hammingDistance(x int, y int) int {
 	xx := fmt.Sprintf("%032b", x)
 	yy := fmt.Sprintf("%032b", y)

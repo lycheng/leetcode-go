@@ -1,10 +1,8 @@
 package dp
 
-import (
-	"fmt"
-	"math"
-)
+import "math"
 
+// https://leetcode.com/problems/count-numbers-with-unique-digits/
 func countNumbersWithUniqueDigits(n int) int {
 	m := int(math.Min(float64(n), 10.0))
 	seq := make([]int, m+1)

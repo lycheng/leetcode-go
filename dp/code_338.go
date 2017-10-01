@@ -5,6 +5,8 @@ package dp
  * 否则其等于小于它的最大的 2^N + x
  * x 范围为 1 ~ (2^N - 1)，直到 2^(N+1) 之后继续循环
  */
+
+// https://leetcode.com/problems/counting-bits/description/
 func countBits(num int) []int {
 	res := make([]int, num+1)
 

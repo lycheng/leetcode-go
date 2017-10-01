@@ -1,6 +1,6 @@
-// package math
 package math
 
+// https://leetcode.com/problems/add-digits/
 func addDigits(num int) int {
 	if num == 0 {
 		return 0

@@ -1,6 +1,6 @@
-// package array for leetcode array tags codes
 package array
 
+// https://leetcode.com/problems/product-of-array-except-self/description/
 func productExceptSelf(nums []int) []int {
 
 	lenNums := len(nums)

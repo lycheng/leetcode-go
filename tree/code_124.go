@@ -6,6 +6,7 @@ import (
 	"github.com/lycheng/leetcode-go/utils"
 )
 
+// https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
 func maxPathSum(root *utils.TreeNode) int {
 	curMax := int(math.MinInt32)
 	dfs(root, &curMax)

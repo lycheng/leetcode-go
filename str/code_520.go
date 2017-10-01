@@ -1,6 +1,6 @@
-// package str
 package str
 
+// https://leetcode.com/problems/detect-capital/description/
 func detectCapitalUse(word string) bool {
 	A := 65
 	Z := 90

@@ -1,5 +1,6 @@
 package hash
 
+// https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
 func intersect(nums1 []int, nums2 []int) []int {
 
 	var lessNums []int

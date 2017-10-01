@@ -1,6 +1,6 @@
-// package str
 package str
 
+// https://leetcode.com/problems/implement-strstr/description/
 func strStr(haystack string, needle string) int {
 	if haystack == needle {
 		return 0

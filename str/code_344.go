@@ -1,11 +1,10 @@
-// package str
-// https://leetcode.com/problems/reverse-string/
 package str
 
 import (
 	"strings"
 )
 
+// https://leetcode.com/problems/reverse-string/
 func reverseString(s string) string {
 	dst := make([]string, 0)
 

@@ -50,3 +50,34 @@ func TestCode124(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode617(t *testing.T) {
+	t1 := &utils.TreeNode{
+		Val: 1,
+		Left: &utils.TreeNode{
+			Val: 2,
+		},
+		Right: &utils.TreeNode{
+			Val: 3,
+		},
+	}
+
+	dst := mergeTrees(t1, nil)
+	if t1 != dst {
+		t.Fatal("error with t2 = nil")
+	}
+
+	t2 := &utils.TreeNode{
+		Val:  1,
+		Left: nil,
+		Right: &utils.TreeNode{
+			Val: 3,
+		},
+	}
+
+	dst = mergeTrees(t1, t2)
+	if dst.Val != 2 || dst.Left.Val != 2 || dst.Right.Val != 6 {
+		t.Error("error with t2 = nil")
+	}
+	t.Log("Success")
+}

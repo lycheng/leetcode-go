@@ -1,4 +1,3 @@
-// package str
 package str
 
 type Stack struct {
@@ -36,6 +35,7 @@ func (s *Stack) isEmpty() bool {
 	return len(s.Data) == 0
 }
 
+// https://leetcode.com/problems/valid-parentheses/description/
 func isValid(s string) bool {
 	pair := map[string]string{
 		")": "(",

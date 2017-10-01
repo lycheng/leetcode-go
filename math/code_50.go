@@ -1,7 +1,6 @@
-// package math
-// https://leetcode.com/problems/powx-n/
 package math
 
+// https://leetcode.com/problems/powx-n/
 func myPow(x float64, n int) float64 {
 	var result float64 = 1
 	postive := n > 0

@@ -1,8 +1,7 @@
-// package math
 package math
 
+// https://leetcode.com/problems/ugly-number/
 func isUgly(num int) bool {
-
 	factors := []int{2, 3, 5}
 	idx := 0
 	for num > 1 {

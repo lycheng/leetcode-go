@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// https://leetcode.com/problems/happy-number/description/
 func isHappy(n int) bool {
 	set := make(map[int]bool)
 	for {

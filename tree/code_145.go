@@ -1,10 +1,10 @@
-// https://leetcode.com/problems/binary-tree-postorder-traversal/
 package tree
 
 import (
 	"github.com/lycheng/leetcode-go/utils"
 )
 
+// https://leetcode.com/problems/binary-tree-postorder-traversal/
 func postorderTraversal(root *utils.TreeNode) []int {
 	result := make([]int, 0)
 

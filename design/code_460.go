@@ -1,7 +1,6 @@
-// Package design
-// https://leetcode.com/problems/lfu-cache
 package design
 
+// https://leetcode.com/problems/lfu-cache
 type Node struct {
 	Prev  *Node
 	Next  *Node

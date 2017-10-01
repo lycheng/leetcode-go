@@ -1,10 +1,10 @@
-// package str
 package str
 
 import (
 	"strings"
 )
 
+// https://leetcode.com/problems/reverse-vowels-of-a-string/description/
 func reverseVowels(s string) string {
 	vowels := map[string]bool{
 		"A": true, "a": true,

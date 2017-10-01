@@ -1,5 +1,6 @@
 package hash
 
+// https://leetcode.com/problems/valid-sudoku/description/
 func isValidSudoku(board [][]byte) bool {
 	for i, row := range board {
 		for j, val := range row {
