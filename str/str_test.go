@@ -112,3 +112,13 @@ func TestCode520(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode557(t *testing.T) {
+	src := "Let's take LeetCode contest"
+	dst := "s'teL ekat edoCteeL tsetnoc"
+	ret := reverseWords(src)
+	if ret != dst {
+		t.Fatal("get", ret, "expect", dst)
+	}
+	t.Log("success")
+}
