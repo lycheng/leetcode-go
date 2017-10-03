@@ -1,6 +1,7 @@
 package math
 
 import (
+	"reflect"
 	"testing"
 )
 
@@ -74,4 +75,22 @@ func TestCode50(t *testing.T) {
 		t.Error("error")
 	}
 	t.Log("Success")
+}
+
+func TestCode645(t *testing.T) {
+	src := []int{1, 2, 2, 4}
+	dst := []int{2, 3}
+
+	ret := findErrorNums(src)
+	if !reflect.DeepEqual(ret, dst) {
+		t.Fatal("error")
+	}
+
+	src = []int{3, 2, 3, 4, 6, 5}
+	dst = []int{3, 1}
+	ret = findErrorNums(src)
+	if !reflect.DeepEqual(ret, dst) {
+		t.Fatal("error with not sorted array")
+	}
+	t.Log("success")
 }

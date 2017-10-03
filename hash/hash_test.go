@@ -112,3 +112,13 @@ func TestCode347(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode500(t *testing.T) {
+	src := []string{"Hello", "Alaska", "Dad", "Peace"}
+	dst := []string{"Alaska", "Dad"}
+
+	if ret := findWords(src); !reflect.DeepEqual(dst, ret) {
+		t.Fatal("error")
+	}
+	t.Log("success")
+}
