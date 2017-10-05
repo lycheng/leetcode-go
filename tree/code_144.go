@@ -1,11 +1,7 @@
 package tree
 
-import (
-	"github.com/lycheng/leetcode-go/utils"
-)
-
 // https://leetcode.com/problems/binary-tree-preorder-traversal/
-func preorderTraversal(root *utils.TreeNode) []int {
+func preorderTraversal(root *TreeNode) []int {
 	result := make([]int, 0)
 
 	if root == nil {

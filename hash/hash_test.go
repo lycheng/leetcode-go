@@ -122,3 +122,15 @@ func TestCode500(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode575(t *testing.T) {
+	candies := []int{1, 1, 3, 4}
+	if k := distributeCandies(candies); k != 2 {
+		t.Fatal("expect 2 and got", k)
+	}
+	candies = []int{1000, 1000, 2, 1, 2, 5, 3, 1}
+	if k := distributeCandies(candies); k != 4 {
+		t.Fatal("expect 4 and got", k)
+	}
+	t.Log("success")
+}

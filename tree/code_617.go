@@ -1,10 +1,7 @@
 package tree
 
-import (
-	"github.com/lycheng/leetcode-go/utils"
-)
-
-func mergeTrees(t1 *utils.TreeNode, t2 *utils.TreeNode) *utils.TreeNode {
+// https://leetcode.com/problems/merge-two-binary-trees/description/
+func mergeTrees(t1 *TreeNode, t2 *TreeNode) *TreeNode {
 	if t1 == nil {
 		return t2
 	}
@@ -13,7 +10,7 @@ func mergeTrees(t1 *utils.TreeNode, t2 *utils.TreeNode) *utils.TreeNode {
 		return t1
 	}
 
-	dst := &utils.TreeNode{}
+	dst := &TreeNode{}
 	dst.Val = t1.Val + t2.Val
 	if t1.Left != nil || t2.Left != nil {
 		dst.Left = mergeTrees(t1.Left, t2.Left)

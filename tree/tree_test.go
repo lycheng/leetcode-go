@@ -1,16 +1,15 @@
 package tree
 
 import (
+	"reflect"
 	"testing"
-
-	"github.com/lycheng/leetcode-go/utils"
 )
 
 func TestTraversal(t *testing.T) {
 
-	left := utils.TreeNode{2, nil, nil}
-	right := utils.TreeNode{3, nil, nil}
-	root := utils.TreeNode{1, &left, &right}
+	left := TreeNode{2, nil, nil}
+	right := TreeNode{3, nil, nil}
+	root := TreeNode{1, &left, &right}
 
 	preorder_result := preorderTraversal(&root)
 	if preorder_result[0] != 1 {
@@ -31,20 +30,20 @@ func TestTraversal(t *testing.T) {
 }
 
 func TestCode124(t *testing.T) {
-	left := utils.TreeNode{2, nil, nil}
-	right := utils.TreeNode{3, nil, nil}
-	root := utils.TreeNode{1, &left, &right}
+	left := TreeNode{2, nil, nil}
+	right := TreeNode{3, nil, nil}
+	root := TreeNode{1, &left, &right}
 
 	if maxPathSum(&root) != 6 {
 		t.Error("error")
 	}
 
-	root.Left = &utils.TreeNode{-1, nil, nil}
+	root.Left = &TreeNode{-1, nil, nil}
 	if maxPathSum(&root) != 4 {
 		t.Error("error")
 	}
 
-	root.Right = &utils.TreeNode{-1, nil, nil}
+	root.Right = &TreeNode{-1, nil, nil}
 	if maxPathSum(&root) != 1 {
 		t.Error("error")
 	}
@@ -52,12 +51,12 @@ func TestCode124(t *testing.T) {
 }
 
 func TestCode617(t *testing.T) {
-	t1 := &utils.TreeNode{
+	t1 := &TreeNode{
 		Val: 1,
-		Left: &utils.TreeNode{
+		Left: &TreeNode{
 			Val: 2,
 		},
-		Right: &utils.TreeNode{
+		Right: &TreeNode{
 			Val: 3,
 		},
 	}
@@ -67,10 +66,10 @@ func TestCode617(t *testing.T) {
 		t.Fatal("error with t2 = nil")
 	}
 
-	t2 := &utils.TreeNode{
+	t2 := &TreeNode{
 		Val:  1,
 		Left: nil,
-		Right: &utils.TreeNode{
+		Right: &TreeNode{
 			Val: 3,
 		},
 	}
@@ -80,4 +79,24 @@ func TestCode617(t *testing.T) {
 		t.Error("error with t2 = nil")
 	}
 	t.Log("Success")
+}
+
+func TestCode637(t *testing.T) {
+	root := &TreeNode{
+		Val: 1,
+		Left: &TreeNode{
+			Val: 2,
+		},
+		Right: &TreeNode{
+			Val: 3,
+			Left: &TreeNode{
+				Val: 4,
+			},
+		},
+	}
+	expected := []float64{1, 2.5, 4}
+	if ret := averageOfLevels(root); !reflect.DeepEqual(ret, expected) {
+		t.Fatal("expect", expected, "and get", ret)
+	}
+	t.Log("success")
 }

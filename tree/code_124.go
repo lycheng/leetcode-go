@@ -1,19 +1,15 @@
 package tree
 
-import (
-	"math"
-
-	"github.com/lycheng/leetcode-go/utils"
-)
+import "math"
 
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
-func maxPathSum(root *utils.TreeNode) int {
+func maxPathSum(root *TreeNode) int {
 	curMax := int(math.MinInt32)
 	dfs(root, &curMax)
 	return curMax
 }
 
-func dfs(root *utils.TreeNode, curMax *int) int {
+func dfs(root *TreeNode, curMax *int) int {
 	if root == nil {
 		return 0
 	}
