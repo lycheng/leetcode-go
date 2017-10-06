@@ -73,3 +73,11 @@ func TestCode674(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode485(t *testing.T) {
+	src := []int{1, 1, 0, 1, 1, 1}
+	if l := findMaxConsecutiveOnes(src); l != 3 {
+		t.Error("got", l, "and expect 3")
+	}
+	t.Log("success")
+}

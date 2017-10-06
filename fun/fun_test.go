@@ -42,3 +42,17 @@ func TestCode657(t *testing.T) {
 	}
 	t.Log("Success")
 }
+
+func TestCode463(t *testing.T) {
+	var grid [][]int = [][]int{
+		[]int{0, 1, 0, 0},
+		[]int{1, 1, 1, 0},
+		[]int{0, 1, 0, 0},
+		[]int{1, 1, 0, 0},
+	}
+
+	if ret := islandPerimeter(grid); ret != 16 {
+		t.Fatal("get", ret, "and expect", 16)
+	}
+	t.Log("success")
+}
