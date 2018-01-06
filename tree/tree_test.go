@@ -100,3 +100,58 @@ func TestCode637(t *testing.T) {
 	}
 	t.Log("success")
 }
+
+func TestCode653(t *testing.T) {
+	root := &TreeNode{
+		Val: 5,
+		Left: &TreeNode{
+			Val: 3,
+			Left: &TreeNode{
+				Val: 2,
+			},
+			Right: &TreeNode{
+				Val: 4,
+			},
+		},
+		Right: &TreeNode{
+			Val: 6,
+			Right: &TreeNode{
+				Val: 7,
+			},
+		},
+	}
+
+	k := 9
+	expected := true
+	if ret := findTarget(root, k); ret != expected {
+		t.Fatal("expect", expected, "and get", ret)
+	}
+
+	k = 28
+	expected = false
+	if ret := findTarget(root, k); ret != expected {
+		t.Fatal("expect", expected, "and get", ret)
+	}
+
+	root = &TreeNode{
+		Val: 2,
+		Left: &TreeNode{
+			Val: 1,
+		},
+		Right: &TreeNode{
+			Val: 3,
+		},
+	}
+	k = 4
+	expected = true
+	if ret := findTarget(root, k); ret != expected {
+		t.Fatal("expect", expected, "and get", ret)
+	}
+
+	k = 1
+	expected = false
+	if ret := findTarget(root, k); ret != expected {
+		t.Fatal("expect", expected, "and get", ret)
+	}
+	t.Log("success")
+}
