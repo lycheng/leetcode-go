@@ -1,4 +1,3 @@
-// package bits
 package bits
 
 import "fmt"
@@ -13,7 +12,7 @@ func hammingDistance(x int, y int) int {
 		if xx[i] == yy[i] {
 			continue
 		}
-		n += 1
+		n++
 	}
 	return n
 }
@@ -29,7 +28,7 @@ func hammingDistance1(x int, y int) int {
 		if string(i) == "0" {
 			continue
 		}
-		n += 1
+		n++
 	}
 	return n
 }

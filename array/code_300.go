@@ -11,7 +11,7 @@ func lengthOfLIS(nums []int) int {
 	clen := 1
 	for i := 1; i < cnt; i++ {
 		if nums[i] > dp[clen] {
-			clen += 1
+			clen++
 			dp[clen] = nums[i]
 			continue
 		}

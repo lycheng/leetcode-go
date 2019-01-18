@@ -5,7 +5,7 @@ func findErrorNums(nums []int) []int {
 	ret := []int{0, 0}
 	m := make(map[int]int, 0)
 	for _, num := range nums {
-		m[num] += 1
+		m[num]++
 	}
 
 	cnt := len(nums)

@@ -11,18 +11,18 @@ func TestTraversal(t *testing.T) {
 	right := TreeNode{3, nil, nil}
 	root := TreeNode{1, &left, &right}
 
-	preorder_result := preorderTraversal(&root)
-	if preorder_result[0] != 1 {
+	preorderRv := preorderTraversal(&root)
+	if preorderRv[0] != 1 {
 		t.Error("error")
 	}
 
-	inorder_result := inorderTraversal(&root)
-	if inorder_result[1] != 1 {
+	inorderRv := inorderTraversal(&root)
+	if inorderRv[1] != 1 {
 		t.Error("error")
 	}
 
-	postorder_result := postorderTraversal(&root)
-	if postorder_result[2] != 1 {
+	postorderRv := postorderTraversal(&root)
+	if postorderRv[2] != 1 {
 		t.Error("error")
 	}
 

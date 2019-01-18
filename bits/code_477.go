@@ -8,7 +8,7 @@ func totalHammingDistance(nums []int) int {
 		oneCnt := 0
 		for _, num := range nums {
 			if (num & (1 << uint(i))) > 0 {
-				oneCnt += 1
+				oneCnt++
 			}
 		}
 		result += oneCnt * (count - oneCnt)

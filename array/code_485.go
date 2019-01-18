@@ -9,7 +9,7 @@ func findMaxConsecutiveOnes(nums []int) int {
 			curCnt = 0
 			continue
 		}
-		curCnt += 1
+		curCnt++
 		if curCnt > max {
 			max = curCnt
 		}

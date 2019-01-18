@@ -13,7 +13,7 @@ func myPow(x float64, n int) float64 {
 			n /= 2
 		} else {
 			result *= x
-			n -= 1
+			n--
 		}
 	}
 

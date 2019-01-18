@@ -15,7 +15,7 @@ func pattern(src string) string {
 		b := byte(r)
 		if srcMap[b] == 0 {
 			srcMap[b] = i
-			i += 1
+			i++
 		}
 		array = append(array, base+byte(srcMap[b]))
 	}

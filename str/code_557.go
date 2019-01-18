@@ -13,11 +13,11 @@ func reverseWords(s string) string {
 	r := 0
 	for r < end {
 		if s[r] != ' ' {
-			r += 1
+			r++
 			continue
 		}
 		words = append(words, s[l:r])
-		r += 1
+		r++
 		l = r
 	}
 	words = append(words, s[l:r])

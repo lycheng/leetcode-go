@@ -5,7 +5,7 @@ func distributeCandies(candies []int) int {
 	cnt := len(candies)
 	m := make(map[int]int, 0)
 	for _, k := range candies {
-		m[k] += 1
+		m[k]++
 	}
 
 	kinds := 0
@@ -14,7 +14,7 @@ func distributeCandies(candies []int) int {
 			break
 		}
 		if ccnt == 1 {
-			kinds += 1
+			kinds++
 			m[kind] = 0
 		}
 	}
@@ -29,9 +29,9 @@ func distributeCandies(candies []int) int {
 				return kinds
 			}
 			hits[kind] = true
-			kinds += 1
-			curCandies += 1
-			m[kind] -= 1
+			kinds++
+			curCandies++
+			m[kind]--
 		}
 	}
 	return kinds

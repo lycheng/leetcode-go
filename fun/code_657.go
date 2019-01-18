@@ -7,13 +7,13 @@ func judgeCircle(moves string) bool {
 	for _, m := range moves {
 		switch m {
 		case 'U', 'u':
-			y += 1
+			y++
 		case 'D', 'd':
-			y -= 1
+			y--
 		case 'R', 'r':
-			x += 1
+			x++
 		case 'L', 'l':
-			x -= 1
+			x--
 		}
 	}
 	return x == 0 && y == 0

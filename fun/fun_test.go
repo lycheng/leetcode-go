@@ -44,7 +44,7 @@ func TestCode657(t *testing.T) {
 }
 
 func TestCode463(t *testing.T) {
-	var grid [][]int = [][]int{
+	grid := [][]int{
 		[]int{0, 1, 0, 0},
 		[]int{1, 1, 1, 0},
 		[]int{0, 1, 0, 0},

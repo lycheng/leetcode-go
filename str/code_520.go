@@ -10,7 +10,7 @@ func detectCapitalUse(word string) bool {
 
 	for idx, c := range word {
 		if int(c) >= A && int(c) <= Z {
-			uppercaseCnt += 1
+			uppercaseCnt++
 			if first < 0 {
 				first = idx
 			}

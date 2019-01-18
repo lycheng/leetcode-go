@@ -18,19 +18,19 @@ func islandPerimeter(grid [][]int) int {
 func perimeter(grid [][]int, i, j int, maxI, maxJ int) int {
 	total := 4
 	if i != 0 && grid[i-1][j] == 1 {
-		total -= 1
+		total--
 	}
 
 	if i < maxI-1 && grid[i+1][j] == 1 {
-		total -= 1
+		total--
 	}
 
 	if j != 0 && grid[i][j-1] == 1 {
-		total -= 1
+		total--
 	}
 
 	if j < maxJ-1 && grid[i][j+1] == 1 {
-		total -= 1
+		total--
 	}
 	return total
 }

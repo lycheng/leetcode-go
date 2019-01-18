@@ -11,7 +11,7 @@ func isUgly(num int) bool {
 		if num%factors[idx] == 0 {
 			num = num / factors[idx]
 		} else {
-			idx += 1
+			idx++
 		}
 	}
 	return 1 == num

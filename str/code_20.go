@@ -1,5 +1,6 @@
 package str
 
+// Stack use for FILO
 type Stack struct {
 	Data []string
 }

@@ -13,7 +13,7 @@ func findLengthOfLCIS(nums []int) int {
 			clen = 1
 			continue
 		}
-		clen += 1
+		clen++
 		if clen > ret {
 			ret = clen
 		}

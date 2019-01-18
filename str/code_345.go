@@ -22,19 +22,19 @@ func reverseVowels(s string) string {
 	for i <= j {
 		if !vowels[string(s[i])] {
 			target[i] = string(s[i])
-			i += 1
+			i++
 			continue
 		}
 
 		if !vowels[string(s[j])] {
 			target[j] = string(s[j])
-			j -= 1
+			j--
 			continue
 		}
 		target[i], target[j] = string(s[j]), string(s[i])
 
-		i += 1
-		j -= 1
+		i++
+		j--
 	}
 	return strings.Join(target, "")
 }
